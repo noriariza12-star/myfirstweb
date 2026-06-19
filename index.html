@@ -15,6 +15,9 @@
         <button id="mybutton"> pick me choose me </button>
         <script>
         const mybutton = document.getElementById("mybutton")
+        const img = document.createElement("img")
+        img.src = "https://i.pinimg.com/736x/8b/b5/0d/8bb50d19f707284d78cf6bf4bab9dabf.jpg"
+        mybutton.addEventListener("click",e => document.body.append(img))
         mybutton.addEventListener("click",e => document.body.append("Loser"))
         </script>
     </body>
