@@ -3,10 +3,15 @@
         <title>My First Website 💫</title>
         <style>
             h1{
-                color:#021A54
+                color:#34908B
             }
             button{
-                background-color:#53a8e1
+                background-color:#9FA1FF;
+                color: white; 
+                border: none; 
+                padding: 10px 20px; 
+                border-radius: 10px; 
+                cursor: pointer;
             }
             body{
                 text-align:center;
@@ -14,8 +19,10 @@
             }
             img{
                 display: block;
-                align-self: center;
-                justify-self: center;
+                margin: 20px auto;
+                max-width: 300px;
+                border-radius: 12px;
+                
             }
             .spotify-box{
                 background:#FFE5F3;
@@ -23,6 +30,12 @@
                 border-radius:20px;
                 padding:10px;
                 display:inline-block;
+            }
+            .loser-text{
+            color: #021A54; 
+            font-size: 24px; 
+            font-weight: bold; 
+            margin-top: 15px;
             }
         </style>
     </head>
@@ -33,7 +46,7 @@
         data-testid="embed-iframe"
         style="border-radius:12px"
         src="https://open.spotify.com/embed/track/10JsYPcjhsD9nwTuk51Jtb?utm_source=generator&si=e04963816cf541d0"
-        width="100%"
+        width="350"
         height="352"
         frameborder="0"
         allowfullscreen=""
@@ -49,9 +62,19 @@
         <script>
         const mybutton = document.getElementById("mybutton")
         const img = document.createElement("img")
+        const losertext = document.createElement("p")
         img.src = "https://i.pinimg.com/736x/8b/b5/0d/8bb50d19f707284d78cf6bf4bab9dabf.jpg"
-        mybutton.addEventListener("click",e => document.body.append(img))
-        mybutton.addEventListener("click",e => document.body.append("Loser"))
+        losertext.textContent = "Loser" ; 
+        losertext.classList.add("loser-text");
+
+        mybutton.addEventListener("click", () => {
+        if (!document.body.contains(img)) {
+            document.body.append(img);
+            }
+        if (!document.body.contains(loserText)) {
+            document.body.append(loserText);
+            }
+        });
         </script>
     </body>
 </html>
